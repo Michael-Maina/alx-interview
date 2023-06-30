@@ -1,4 +1,11 @@
+#!/usr/bin/python3
+"""
+Pascal's Triangle Implementation
+"""
+
+
 def factorial(n):
+    """Returns the factorial of an integer"""
     if (n == 0):
         return (1)
 
@@ -6,6 +13,9 @@ def factorial(n):
 
 
 def pascal_triangle(n):
+    """
+    Returns a list of lists of coefficients from 0 up to the passed integer
+    """
     pascal_list = []
     if (n <= 0):
         return pascal_list
