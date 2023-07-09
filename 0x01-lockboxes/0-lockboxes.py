@@ -10,7 +10,7 @@ def canUnlockAll(boxes):
     all_keys = []
     for count, key in enumerate(given_keys, 1):
         all_keys = given_keys.copy()
-        if boxes[key] == []:
+        if not boxes[key]:
             all_keys.append(0)
         else:
             all_keys.extend(boxes[key])
