@@ -20,8 +20,6 @@ def canUnlockAll(boxes):
             if i not in given_keys and i < len(boxes):
                 given_keys.append(i)
 
-        print(f"After {given_keys} Count:{count} Boxes:{len(boxes)}")
-
         if (count == len(boxes)):
             return True
 
