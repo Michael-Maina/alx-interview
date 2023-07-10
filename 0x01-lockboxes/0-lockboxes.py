@@ -10,7 +10,7 @@ def canUnlockAll(boxes):
     all_keys = []
     for count, key in enumerate(given_keys, 1):
         all_keys = given_keys.copy()
-        if not boxes[key]:
+        if key < len(boxes) and not boxes[key]:
             all_keys.append(0)
         else:
             all_keys.extend(boxes[key])
@@ -19,6 +19,10 @@ def canUnlockAll(boxes):
         for i in all_keys:
             if i not in given_keys and i < len(boxes):
                 given_keys.append(i)
+            if 0 not in given_keys:
+                given_keys.append(0)
+
+        print(f"After {given_keys} Count:{count} Boxes:{len(boxes)}")
 
         if (count == len(boxes)):
             return True
