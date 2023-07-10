@@ -22,8 +22,6 @@ def canUnlockAll(boxes):
             if 0 not in given_keys:
                 given_keys.append(0)
 
-        print(f"After {given_keys} Count:{count} Boxes:{len(boxes)}")
-
         if (count == len(boxes)):
             return True
 
