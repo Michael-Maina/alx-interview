@@ -23,13 +23,15 @@ def isWinner(x, nums):
     """
     Solution for prime game
     """
-    if x <= 0 or not nums or 0 in nums:
+    if x <= 0 or not nums:
         return None
 
     # Player1 = Maria
     # Player2 = Ben
     player1 = player2 = 0
     for i in range(x):
+        if nums[i] == 0:
+            return None
         counter = len(findPrimes(nums[i]))
         if (counter % 2) == 0:
             player2 += 1
