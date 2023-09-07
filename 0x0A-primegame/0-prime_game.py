@@ -31,7 +31,7 @@ def isWinner(x, nums):
     player1 = player2 = 0
     for i in range(x):
         if nums[i] == 0:
-            return None
+            continue
         counter = len(findPrimes(nums[i]))
         if (counter % 2) == 0:
             player2 += 1
