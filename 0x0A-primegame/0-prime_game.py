@@ -23,7 +23,7 @@ def isWinner(x, nums):
     """
     Solution for prime game
     """
-    if not x or not nums:
+    if x <= 0 or not nums:
         return None
 
     # Player1 = Maria
@@ -31,14 +31,10 @@ def isWinner(x, nums):
     player1 = player2 = 0
     for i in range(x):
         counter = len(findPrimes(nums[i]))
-        print(counter)
         if (counter % 2) == 0:
             player2 += 1
         else:
             player1 += 1
-
-        print(f'Maria: {player1}')
-        print(f'Ben: {player2}')
 
     if player1 > player2:
         return 'Maria'
