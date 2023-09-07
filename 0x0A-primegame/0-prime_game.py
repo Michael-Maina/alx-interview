@@ -23,7 +23,7 @@ def isWinner(x, nums):
     """
     Solution for prime game
     """
-    if x <= 0 or not nums:
+    if not x or not nums:
         return None
 
     # Player1 = Maria
